@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, TextInput } from 'react-native'
 
-const NewsFeed = () => {
+const FavouriteScreen = () => {
     return (
         <ScrollView>
             <View>
@@ -12,7 +12,7 @@ const NewsFeed = () => {
                     </View>
 
                     <View style={[styles.via, styles.font]}>
-                        <Text style={[styles.via, styles.font]}>Home</Text>
+                        <Text style={[styles.via, styles.font]}>Favourite</Text>
                     </View>
 
                     <View style={styles.via}>
@@ -22,11 +22,11 @@ const NewsFeed = () => {
 
                 <View style={styles.start2}>
                     <TouchableOpacity style={styles.btn1}>
-                        <Image style={styles.image} source={require("../Assets/Images/HomeIcon.png")} />
+                        <Image style={styles.image} source={require("../Assets/Images/BlackHeartIcon.png")} />
                         <Text style={styles.btnText2}>HOME</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.btn3}>
-                        <Image style={styles.image} source={require("../Assets/Images/HeartIcon.png")} />
+                        <Image style={styles.image} source={require("../Assets/Images/WhiteHeartIcon.png")} />
                         <Text style={styles.btnText2}>FAVOURITE</Text>
                     </TouchableOpacity>
 
@@ -64,7 +64,7 @@ const NewsFeed = () => {
                 <View >
                     <View style={styles.Header} >
                         <Image style={styles.image3} source={require("../Assets/Images/PRCcardIcon.png")} />
-                        <Image style={styles.image3} source={require("../Assets/Images/HeartRedIcon.png")} />
+                        <Image style={styles.image3} source={require("../Assets/Images/RedHeartIcon.png")} />
                     </View>
 
                     <View style={styles.Body} >
@@ -81,7 +81,7 @@ const NewsFeed = () => {
                 <View >
                     <View style={styles.Header} >
                         <Image style={styles.image3} source={require("../Assets/Images/PRCcardIcon.png")} />
-                        <Image style={styles.image3} source={require("../Assets/Images/HeartRedIcon.png")} />
+                        <Image style={styles.image3} source={require("../Assets/Images/RedHeartIcon.png")} />
                     </View>
 
                     <View style={styles.Body} >
@@ -98,7 +98,7 @@ const NewsFeed = () => {
                 <View >
                     <View style={styles.Header} >
                         <Image style={styles.image3} source={require("../Assets/Images/PRCcardIcon.png")} />
-                        <Image style={styles.image3} source={require("../Assets/Images/HeartRedIcon.png")} />
+                        <Image style={styles.image3} source={require("../Assets/Images/RedHeartIcon.png")} />
                     </View>
 
                     <View style={styles.Body} >
@@ -115,7 +115,7 @@ const NewsFeed = () => {
                 <View >
                     <View style={styles.Header} >
                         <Image style={styles.image3} source={require("../Assets/Images/PRCcardIcon.png")} />
-                        <Image style={styles.image3} source={require("../Assets/Images/HeartRedIcon.png")} />
+                        <Image style={styles.image3} source={require("../Assets/Images/RedHeartIcon.png")} />
                     </View>
 
                     <View style={styles.Body} >
@@ -132,7 +132,7 @@ const NewsFeed = () => {
                 <View >
                     <View style={styles.Header} >
                         <Image style={styles.image3} source={require("../Assets/Images/PRCcardIcon.png")} />
-                        <Image style={styles.image3} source={require("../Assets/Images/HeartRedIcon.png")} />
+                        <Image style={styles.image3} source={require("../Assets/Images/RedHeartIcon.png")} />
                     </View>
 
                     <View style={styles.Body} >
@@ -149,7 +149,7 @@ const NewsFeed = () => {
                 <View >
                     <View style={styles.Header} >
                         <Image style={styles.image3} source={require("../Assets/Images/PRCcardIcon.png")} />
-                        <Image style={styles.image3} source={require("../Assets/Images/HeartRedIcon.png")} />
+                        <Image style={styles.image3} source={require("../Assets/Images/RedHeartIcon.png")} />
                     </View>
 
                     <View style={styles.Body} >
@@ -166,7 +166,7 @@ const NewsFeed = () => {
                 <View >
                     <View style={styles.Header} >
                         <Image style={styles.image3} source={require("../Assets/Images/PRCcardIcon.png")} />
-                        <Image style={styles.image3} source={require("../Assets/Images/HeartRedIcon.png")} />
+                        <Image style={styles.image3} source={require("../Assets/Images/RedHeartIcon.png")} />
                     </View>
 
                     <View style={styles.Body} >
@@ -183,7 +183,7 @@ const NewsFeed = () => {
                 <View >
                     <View style={styles.Header} >
                         <Image style={styles.image3} source={require("../Assets/Images/PRCcardIcon.png")} />
-                        <Image style={styles.image3} source={require("../Assets/Images/HeartRedIcon.png")} />
+                        <Image style={styles.image3} source={require("../Assets/Images/RedHeartIcon.png")} />
                     </View>
 
                     <View style={styles.Body} >
@@ -200,7 +200,7 @@ const NewsFeed = () => {
                 <View >
                     <View style={styles.Header} >
                         <Image style={styles.image3} source={require("../Assets/Images/PRCcardIcon.png")} />
-                        <Image style={styles.image3} source={require("../Assets/Images/HeartRedIcon.png")} />
+                        <Image style={styles.image3} source={require("../Assets/Images/RedHeartIcon.png")} />
                     </View>
 
                     <View style={styles.Body} >
@@ -217,7 +217,7 @@ const NewsFeed = () => {
                 <View >
                     <View style={styles.Header} >
                         <Image style={styles.image3} source={require("../Assets/Images/PRCcardIcon.png")} />
-                        <Image style={styles.image3} source={require("../Assets/Images/HeartRedIcon.png")} />
+                        <Image style={styles.image3} source={require("../Assets/Images/RedHeartIcon.png")} />
                     </View>
 
                     <View style={styles.Body} >
@@ -234,7 +234,7 @@ const NewsFeed = () => {
                 <View >
                     <View style={styles.Header} >
                         <Image style={styles.image3} source={require("../Assets/Images/PRCcardIcon.png")} />
-                        <Image style={styles.image3} source={require("../Assets/Images/HeartRedIcon.png")} />
+                        <Image style={styles.image3} source={require("../Assets/Images/RedHeartIcon.png")} />
                     </View>
 
                     <View style={styles.Body} >
@@ -267,7 +267,7 @@ const NewsFeed = () => {
         </ScrollView>
     )
 }
-export default NewsFeed;
+export default FavouriteScreen;
 
 const styles = StyleSheet.create({
     start: {
@@ -335,16 +335,16 @@ const styles = StyleSheet.create({
         height: 47,
         borderWidth: 1,
         borderRadius: 6,
-        backgroundColor: "#F01716",
-
+        backgroundColor: "#F1F1F1",
+        
     },
     btn3: {
+        backgroundColor: "#F01716",
         marginLeft: 10,
         width: "25%",
         height: 47,
         borderWidth: 1,
         borderRadius: 6,
-        backgroundColor: "#F1F1F1",
     },
     btn4: {
         marginLeft: 10,
