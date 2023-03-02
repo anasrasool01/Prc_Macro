@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, TextInput } from 'react-native'
 
-const PodCastScreen = () => {
+const ClintCallsScreen = () => {
     return (
         <ScrollView>
             <View>
@@ -31,11 +31,11 @@ const PodCastScreen = () => {
                     </TouchableOpacity>
 
                     <TouchableOpacity style={styles.btn4}>
-                        <Image style={styles.image} source={require("../Assets/Images/WhiteMicroPhoneIcon.png")} />
+                        <Image style={styles.image} source={require("../Assets/Images/MicrophoneIcon.png")} />
                         <Text style={styles.btnText3}>PADCAST</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.btn5}>
-                        <Image style={styles.image} source={require("../Assets/Images/CallIcon.png")} />
+                        <Image style={styles.image} source={require("../Assets/Images/WhiteCallIcon.png")} />
                         <Text style={styles.btnText2}>CLINT CALLS</Text>
                     </TouchableOpacity>
 
@@ -283,7 +283,7 @@ const PodCastScreen = () => {
         </ScrollView>
     )
 }
-export default PodCastScreen;
+export default ClintCallsScreen;
 
 const styles = StyleSheet.create({
     start: {
@@ -354,20 +354,22 @@ const styles = StyleSheet.create({
 
     },
     btn3: {
+       
         marginLeft: 10,
         width: "25%",
         height: 47,
         borderWidth: 1,
         borderRadius: 6,
         backgroundColor: "#F1F1F1",
+
     },
     btn4: {
-        backgroundColor: "#F01716",
         marginLeft: 10,
         width: "25%",
         height: 47,
         borderWidth: 1,
         borderRadius: 6,
+        backgroundColor: "#F1F1F1",
     },
     btn5: {
         marginLeft: 10,
@@ -375,7 +377,7 @@ const styles = StyleSheet.create({
         height: 47,
         borderWidth: 1,
         borderRadius: 6,
-        backgroundColor: "#F1F1F1",
+        backgroundColor: "#F01716",
     },
     btn6: {
         flexDirection: "row",

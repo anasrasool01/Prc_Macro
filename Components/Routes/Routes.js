@@ -5,6 +5,10 @@ import ForgetPassword from '../Screens/ScreenTwo';
 import NewsFeed from '../Screens/ScreenThree';
 import FavouriteScreen from '../Screens/ScreenFour';
 import PodCastScreen from '../Screens/ScreenFive';
+import ClintCallsScreen from '../Screens/ScreenSix';
+import NotificationScreen from '../Screens/ScreenSeven';
+import SettingsScreen from '../Screens/ScreenEight';
+import ProfileInformationScreen from '../Screens/ScreenNine';
 
 const Routes = () => {
     return (
@@ -13,7 +17,11 @@ const Routes = () => {
             {/* <ForgetPassword /> */}
             {/* <NewsFeed /> */}
             {/* <FavouriteScreen/> */}
-            <PodCastScreen />
+            {/* <PodCastScreen /> */}
+            {/* <ClintCallsScreen /> */}
+            {/* <NotificationScreen /> */}
+            {/* <SettingsScreen /> */}
+            <ProfileInformationScreen />
 
         </View>
     );
