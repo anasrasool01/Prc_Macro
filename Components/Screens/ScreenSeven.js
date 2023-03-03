@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, TextInput, Pressable } from 'react-native'
 
-const NotificationScreen = () => {
+const NotificationScreen = ({navigation}) => {
     const [checked, setChecked] = useState(false);
 
     const onCheck = () => {
@@ -12,7 +12,7 @@ const NotificationScreen = () => {
             <View>
 
                 <View style={styles.start}>
-                    <Pressable alert>
+                    <Pressable onPress={() => navigation.navigate('SettingsScreen')}>
                         <Image source={require("../Assets/Images/BackArrowICon.png")} />
                     </Pressable>
 
@@ -49,9 +49,7 @@ const NotificationScreen = () => {
                         </View>
                         <View style={styles.TextBlock}>
                             <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
-                            {/* <CheckBox title='Checkbox' checked={checked} onPress={onCheck}/> */}
                             <Text style={styles.Text4}>{checked ? 'Mark as Read' : 'Dont Mark '}</Text>
-                            {/* <Text  >Finance</Text> */}
                         </View>
                     </View>
                 </View>
@@ -66,9 +64,7 @@ const NotificationScreen = () => {
                         </View>
                         <View style={styles.TextBlock}>
                             <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
-                            {/* <CheckBox title='Checkbox' checked={checked} onPress={onCheck}/> */}
                             <Text style={styles.Text4}>{checked ? 'Mark as Read' : 'Dont Mark '}</Text>
-                            {/* <Text  >Finance</Text> */}
                         </View>
                     </View>
                 </View>
@@ -83,9 +79,7 @@ const NotificationScreen = () => {
                         </View>
                         <View style={styles.TextBlock}>
                             <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
-                            {/* <CheckBox title='Checkbox' checked={checked} onPress={onCheck}/> */}
                             <Text style={styles.Text4}>{checked ? 'Mark as Read' : 'Dont Mark '}</Text>
-                            {/* <Text  >Finance</Text> */}
                         </View>
                     </View>
                 </View>
@@ -99,9 +93,7 @@ const NotificationScreen = () => {
                         </View>
                         <View style={styles.TextBlock}>
                             <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
-                            {/* <CheckBox title='Checkbox' checked={checked} onPress={onCheck}/> */}
                             <Text style={styles.Text4}>{checked ? 'Mark as Read' : 'Dont Mark '}</Text>
-                            {/* <Text  >Finance</Text> */}
                         </View>
                     </View>
                 </View>
@@ -116,9 +108,7 @@ const NotificationScreen = () => {
                         </View>
                         <View style={styles.TextBlock}>
                             <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
-                            {/* <CheckBox title='Checkbox' checked={checked} onPress={onCheck}/> */}
                             <Text style={styles.Text4}>{checked ? 'Mark as Read' : 'Dont Mark '}</Text>
-                            {/* <Text  >Finance</Text> */}
                         </View>
                     </View>
                 </View>
@@ -133,9 +123,7 @@ const NotificationScreen = () => {
                         </View>
                         <View style={styles.TextBlock}>
                             <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
-                            {/* <CheckBox title='Checkbox' checked={checked} onPress={onCheck}/> */}
                             <Text style={styles.Text4}>{checked ? 'Mark as Read' : 'Dont Mark '}</Text>
-                            {/* <Text  >Finance</Text> */}
                         </View>
                     </View>
                 </View>
@@ -150,9 +138,7 @@ const NotificationScreen = () => {
                         </View>
                         <View style={styles.TextBlock}>
                             <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
-                            {/* <CheckBox title='Checkbox' checked={checked} onPress={onCheck}/> */}
                             <Text style={styles.Text4}>{checked ? 'Mark as Read' : 'Dont Mark '}</Text>
-                            {/* <Text  >Finance</Text> */}
                         </View>
                     </View>
                 </View>
@@ -167,9 +153,7 @@ const NotificationScreen = () => {
                         </View>
                         <View style={styles.TextBlock}>
                             <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
-                            {/* <CheckBox title='Checkbox' checked={checked} onPress={onCheck}/> */}
                             <Text style={styles.Text4}>{checked ? 'Mark as Read' : 'Dont Mark '}</Text>
-                            {/* <Text  >Finance</Text> */}
                         </View>
                     </View>
                 </View>
@@ -184,9 +168,7 @@ const NotificationScreen = () => {
                         </View>
                         <View style={styles.TextBlock}>
                             <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
-                            {/* <CheckBox title='Checkbox' checked={checked} onPress={onCheck}/> */}
                             <Text style={styles.Text4}>{checked ? 'Mark as Read' : 'Dont Mark '}</Text>
-                            {/* <Text  >Finance</Text> */}
                         </View>
                     </View>
                 </View>
@@ -201,9 +183,7 @@ const NotificationScreen = () => {
                         </View>
                         <View style={styles.TextBlock}>
                             <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
-                            {/* <CheckBox title='Checkbox' checked={checked} onPress={onCheck}/> */}
                             <Text style={styles.Text4}>{checked ? 'Mark as Read' : 'Dont Mark '}</Text>
-                            {/* <Text  >Finance</Text> */}
                         </View>
                     </View>
                 </View>
@@ -251,6 +231,7 @@ const styles = StyleSheet.create({
     btn1: {
         width: "22%",
         borderRadius: 6,
+        borderWidth : 1,
         backgroundColor: "#F01716",
     },
     btn3: {   
@@ -259,6 +240,7 @@ const styles = StyleSheet.create({
         height: 47,
         borderRadius: 6,
         backgroundColor: "#F1F1F1",
+        borderWidth : 1,
     },
     btn4: {
         marginLeft: 10,
@@ -266,6 +248,7 @@ const styles = StyleSheet.create({
         height: 47,
         borderRadius: 6,
         backgroundColor: "#F1F1F1",
+        borderWidth : 1,
     },
     btn5: {
         marginLeft: 10,
@@ -273,6 +256,7 @@ const styles = StyleSheet.create({
         height: 47,
         borderRadius: 6,
         backgroundColor: "#F1F1F1",
+        borderWidth : 1,
     },
     btnText2: {
         alignSelf: "center",

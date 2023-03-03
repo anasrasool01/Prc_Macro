@@ -1,40 +1,40 @@
 import React from 'react'
-import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, TextInput } from 'react-native'
+import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, TextInput, Pressable } from 'react-native'
 
-const NewsFeed = () => {
+const NewsFeed = ({navigation}) => {
     return (
         <ScrollView>
             <View>
                 <View style={[styles.start]}>
 
-                    <View >
+                    <TouchableOpacity onPress={() => navigation.navigate('SettingsScreen')} >
                         <Image source={require("../Assets/Images/SettingIcon.png")} />
-                    </View>
+                    </TouchableOpacity>
 
                     <View style={[styles.via, styles.font]}>
                         <Text style={[styles.via, styles.font]}>Home</Text>
                     </View>
 
-                    <View style={styles.via}>
+                    <TouchableOpacity style={styles.via} onPress={() => navigation.navigate('NotificationScreen')}>
                         <Image source={require("../Assets/Images/BellIcon.png")} onPress={() => { alert('Home') }} />
-                    </View>
+                    </TouchableOpacity>
                 </View>
 
                 <View style={styles.start2}>
-                    <TouchableOpacity style={styles.btn1}>
+                    <TouchableOpacity style={styles.btn1} onPress={() => navigation.navigate('NewsFeed')}>
                         <Image style={styles.image} source={require("../Assets/Images/HomeIcon.png")} />
                         <Text style={styles.btnText2}>HOME</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.btn3}>
+                    <TouchableOpacity style={styles.btn3} onPress={() => navigation.navigate('FavouriteScreen')}>
                         <Image style={styles.image} source={require("../Assets/Images/HeartIcon.png")} />
                         <Text style={styles.btnText2}>FAVOURITE</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.btn4}>
+                    <TouchableOpacity style={styles.btn4} onPress={() => navigation.navigate('PodCastScreen')}>
                         <Image style={styles.image} source={require("../Assets/Images/MicrophoneIcon.png")} />
                         <Text style={styles.btnText3}>PADCAST</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.btn5}>
+                    <TouchableOpacity style={styles.btn5} onPress={() => navigation.navigate('ClintCallsScreen')}>
                         <Image style={styles.image} source={require("../Assets/Images/CallIcon.png")} />
                         <Text style={styles.btnText2}>CLINT CALLS</Text>
                     </TouchableOpacity>

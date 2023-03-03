@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Routes from './Components/Routes/Routes';
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <Routes/>
+      <Routes />
     </View>
   );
 };

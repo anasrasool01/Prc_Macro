@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { View, Text, Switch, StyleSheet, Image, TouchableOpacity, ScrollView, TextInput, Pressable } from 'react-native'
 
-const ProfileInformationScreen = () => {
+const ProfileInformationScreen = ({navigation}) => {
     const [checked, setChecked] = useState(false);
 
     const onCheck = () => {
         setChecked(!checked);
-      };
+    };
     return (
         <ScrollView>
             <View>
 
                 <View style={styles.start}>
-                    <Pressable alert>
+                    <Pressable style={styles.Card1} onPress={() => navigation.navigate('SettingsScreen')}>
                         <Image source={require("../Assets/Images/BackArrowICon.png")} />
                     </Pressable>
 
@@ -22,72 +22,98 @@ const ProfileInformationScreen = () => {
                 </View>
 
                 <View style={styles.Card1}>
+                    <View style={styles.TextBlock1}>
+                        <Text style={styles.Text1} >Preferred Interest</Text>
+                        <Pressable style={styles.btn} >
+                            <Text style={styles.btnt}>EDIT</Text>
+                        </Pressable>
+                    </View>
+                </View>
+
+                <View style={styles.Card1}>
                     <View style={styles.TextBlock}>
-                    <View style={styles.TextBlock}>
-                            <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
+                        <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
                         <Text style={styles.Text5} >Intrest Name</Text>
 
                         <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
                         <Text style={styles.Text5} >Intrest Name</Text>
-                        </View>
+                    </View>
+                </View>
+
+                <View style={styles.Card1}>
+                    <View style={styles.TextBlock}>
+                        <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
+                        <Text style={styles.Text5} >Intrest Name</Text>
+
+                        <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
+                        <Text style={styles.Text5} >Intrest Name</Text>
+                    </View>
+                </View>
+
+                <View style={styles.Card1}>
+                    <View style={styles.TextBlock}>
+                        <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
+                        <Text style={styles.Text5} >Intrest Name</Text>
+
+                        <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
+                        <Text style={styles.Text5} >Intrest Name</Text>
                     </View>
                 </View>
 
 
                 <View style={styles.Card1}>
                     <View style={styles.TextBlock}>
-                        <Image style={styles.image} source={require("../Assets/Images/FrontIcon.png")} />
-                        <Text style={styles.Text5} >Change Password</Text>
+                        <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
+                        <Text style={styles.Text5} >Intrest Name</Text>
+
+                        <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
+                        <Text style={styles.Text5} >Intrest Name</Text>
                     </View>
                 </View>
 
 
                 <View style={styles.Card1}>
                     <View style={styles.TextBlock}>
-                        <Text style={styles.Text5} >Notifications</Text>
-                        <Text style={styles.Text5} >Change Password</Text>
-                       
-                    </View>
-                </View>
+                        <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
+                        <Text style={styles.Text5} >Intrest Name</Text>
 
-                <View style={styles.Card1}>
-                    <View style={styles.TextBlock}>
-                        <Image style={styles.image} source={require("../Assets/Images/FrontIcon.png")} />
-                        <Text style={styles.Text5} >Feedback</Text>
-                    </View>
-                </View>
-
-                <View style={styles.Card1}>
-                    <View style={styles.TextBlock}>
-                        <Image style={styles.image} source={require("../Assets/Images/FrontIcon.png")} />
-                        <Text style={styles.Text5} >Terms & Conditions</Text>
-                    </View>
-                </View>
-
-                <View style={styles.Card1}>
-                    <View style={styles.TextBlock}>
-                        <Image style={styles.image} source={require("../Assets/Images/FrontIcon.png")} />
-                        <Text style={styles.Text5} >Privacy Policy</Text>
+                        <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
+                        <Text style={styles.Text5} >Intrest Name</Text>
                     </View>
                 </View>
 
 
                 <View style={styles.Card1}>
                     <View style={styles.TextBlock}>
-                        <Pressable style={styles.image}>
-                        <Image source={require("../Assets/Images/DelIcon.png")} />
-                        </Pressable>
-                        <Text style={styles.Text5} >Delete Account</Text>
+                        <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
+                        <Text style={styles.Text5} >Intrest Name</Text>
+
+                        <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
+                        <Text style={styles.Text5} >Intrest Name</Text>
                     </View>
                 </View>
 
 
+
                 <View style={styles.Card1}>
                     <View style={styles.TextBlock}>
-                        <Pressable style={styles.image}>
-                        <Image source={require("../Assets/Images/ShutDownIcon.png")} />
-                        </Pressable>
-                        <Text style={styles.Text5} >Profile Information</Text>
+                        <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
+                        <Text style={styles.Text5} >Intrest Name</Text>
+
+                        <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
+                        <Text style={styles.Text5} >Intrest Name</Text>
+                    </View>
+                </View>
+
+
+
+                <View style={styles.Card1}>
+                    <View style={styles.TextBlock}>
+                        <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
+                        <Text style={styles.Text5} >Intrest Name</Text>
+
+                        <Pressable style={styles.TikBox} checked={checked} onPress={onCheck} />
+                        <Text style={styles.Text5} >Intrest Name</Text>
                     </View>
                 </View>
 
@@ -107,7 +133,7 @@ const styles = StyleSheet.create({
         width: "100%",
         padding: 20,
     },
- 
+
     via: {
         marginLeft: "20%",
     },
@@ -124,6 +150,15 @@ const styles = StyleSheet.create({
         marginStart: "4%",
         color: "black",
     },
+    Text1: {
+        fontSize: 25,
+        fontWeight: "500",
+        color: "black",
+        margin: "4%",
+        color: "#4A5981",
+        marginTop: 50,
+        marginBottom: 50,
+    },
     image: {
         alignSelf: "center",
         marginTop: "3%",
@@ -132,21 +167,43 @@ const styles = StyleSheet.create({
     TextBlock: {
         flexDirection: "row",
     },
-    TikBox : {
+    TextBlock1: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+
+    },
+    TikBox: {
         width: "6%",
         height: "60%",
         borderRadius: 4,
-        borderColor : "red",
-        borderWidth:1,
+        borderColor: "red",
+        borderWidth: 1,
         backgroundColor: "#F1F1F1",
-        margin:"3%",
+        margin: "3%",
     },
-    Text4 : {
+    Text4: {
         fontSize: 17,
         fontWeight: "500",
         color: "black",
         marginStart: 5,
-        margin : 12,
-        color : "#F01716"
+        margin: 12,
+        color: "#F01716"
+    },
+    btn: {
+        margin: 10,
+        marginTop: 40,
+        borderWidth: 1,
+        borderColor: "#EAEAEA",
+        borderRadius: 6,
+        backgroundColor: "#F01716",
+        width: "20%",
+        height: "40%"
+    },
+    btnt: {
+        color: "white",
+        fontSize: 18,
+        fontWeight: "500",
+        textAlign: "center",
+        marginTop: "15%"
     },
 })

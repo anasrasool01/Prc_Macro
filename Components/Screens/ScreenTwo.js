@@ -1,18 +1,18 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TextInput, ScrollView, TouchableOpacity } from 'react-native';
 
-const ForgetPassword = () => {
+const ForgetPassword = ({navigation}) => {
     return (
-        <ScrollView>
+       
             <View style={styles.container}>
                 
                 <View style={styles.background}>
                     <Image source={require("../Assets/Images/BackgroundImage.png")} />
                 </View>
-                <View style={styles.Back}>
+                <TouchableOpacity style={styles.Back} onPress={() => navigation.navigate('SignIN')}>
                     <Image source={require("../Assets/Images/BackIcon.png")} />
                     <Text style={styles.BackText}>Back</Text>
-                </View>
+                </TouchableOpacity>
                 <View style={styles.Logo}>
                     <Image source={require("../Assets/Images/LogoPRC.png")} />
                 </View>
@@ -31,12 +31,12 @@ const ForgetPassword = () => {
                         </View>
                     </View>
 
-                    <TouchableOpacity style={styles.btn}>
+                    <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('SignIN')}>
                         <Text style={styles.btnText}>Submit</Text>
                     </TouchableOpacity>
                 </View>
             </View>
-        </ScrollView>
+        
     );
 };
 
@@ -45,23 +45,24 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     background :{
-        height : 1,
+    //    height:'100%',
+        flex:2,
         alignItems: 'center',
     },
     Back :{
         flexDirection : "row",
-        marginTop : 20,
+        // marginTop : 20,
         marginLeft: 40
     },
     Logo: {
-        marginVertical: 110,
+        marginVertical: 140,
         alignItems: "center",
     },
     Box: {
         alignSelf: "center",
         width: 302,
         height: 315,
-        bottom: 50,
+        bottom: 100,
         borderRadius: 5,
         backgroundColor: "white",
     },

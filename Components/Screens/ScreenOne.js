@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TextInput, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, TextInput, ScrollView, TouchableOpacity, Pressable } from 'react-native';
 
-const SignIN = () => {
+const SignIN = ({navigation}) => {
     return (
         <ScrollView>
             <View style={styles.container}>
@@ -31,16 +31,16 @@ const SignIN = () => {
                     </View>
 
 
-                    <TouchableOpacity style={styles.btn}>
+                    <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('NewsFeed')}>
                         <Text style={styles.btnText}>Sign In</Text>
                     </TouchableOpacity>
                     <View style={styles.underline}></View>
                     <View style={styles.DontRemember}>
                         <Text style={styles.DontRememberT}>Don't Remember Password?</Text>
                     </View>
-                    <View style={styles.Forget}>
+                    <Pressable onPress={() => navigation.navigate('ForgetPassword')} style={styles.Forget}>
                         <Text style={styles.ForgetT}>Forget Password?</Text>
-                    </View>
+                    </Pressable>
 
                 </View>
             </View>
@@ -82,6 +82,7 @@ const styles = StyleSheet.create({
         width: 270,
         alignSelf: "center",
         marginVertical: 10,
+        borderRadius : 10,
     },
     ImageOne: {
         marginLeft: 10,
